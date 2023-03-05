@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url("fonts/Cairo-SemiBold.ttf");
+}
+
+body {
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+}
+
+.btn {
+    font-family: Cairo-SemiBold;
+}

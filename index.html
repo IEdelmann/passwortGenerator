@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="bootstrap.min.css" rel="stylesheet">
+      <link href="basicStyle.css" rel="stylesheet">
+      <script src="bootstrap.js"></script>
+    <title>Passwort Generator</title>
+  </head>
+  <body>
+    <header>
+        <div class="container-fluid text-center mt-3">
+            <h1 class="intro">Passwort Generator v2!</h1>
+            <h4 class="intro">Wähle die Art und Komplexität des Passworts:</h4>
+        </div>
+    </header>
+
+    <div class="container-fluid text-center justify-content-center mt-4">
+
+        <div class="btn-group mb-3 mx-2" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnRadio" id="btnRadio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary btn-lg" for="btnRadio1">GANZE WÖRTER</label>
+
+            <input type="radio" class="btn-check" name="btnRadio" id="btnRadio2" autocomplete="off">
+            <label class="btn btn-outline-primary btn-lg" for="btnRadio2">ZEICHENSALAT</label>
+        </div>
+
+        <div class="btn-group mb-3 mx-2" role="group" aria-label="Basic mixed styles example">
+            <button type="button" id="weak" class="btn btn-danger btn-lg">SCHWACH</button>
+            <button type="button" id="middle" class="btn btn-warning btn-lg">AUSGEGLICHEN</button>
+            <button type="button" id="strong" class="btn btn-success btn-lg">STARK</button>
+        </div>
+
+        <div class="container-fluid">
+            <div class="card mt-1 mx-5">
+                <div class="card-header">
+                    DEIN NEUES PASSWORT:
+                </div>
+
+                <div id="output-field" class="card-body">
+                </div>
+
+            </div>
+
+            <div class="container-fluid text-center">
+                <button type="button" id="cpy-clipboard" class="btn btn-primary btn-lg mt-2">IN DIE ZWISCHENABLAGE KOPIEREN</button>
+            </div>
+
+            <div id="cpyAlert">
+
+            </div>
+
+        </div>
+        
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
